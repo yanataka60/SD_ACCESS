@@ -20,27 +20,27 @@
  
 　ワンボードマイコンとの接続は、ワンボードマイコン側のI/Oとソフトウェアによりそれぞれ変わります。
  
-　SD-Card　　　　　Arduino　　　　　　　　　　　　　ワンボードマイコン
+　SD-Card　　　　　Arduino　　　　　　　　　ワンボードマイコン
 
 　　　CLK　　-----　　13
    
-　　　DAT　 -----　　12
+　　　DAT　　-----　　12
    
 　　　CMD　 -----　　11
    
 　　　CS　　 -----　　10
    
-　　　5V　　 -----　　5V　　　　　　　　　　　　　-----　　5V
+　　　5V　　 -----　　5V　　　　　　　　　-----　　5V
    
-　　　GND　 -----　　GND　　　　　　　　　　　　-----　　GND
+　　　GND　 -----　　GND　　　　　　　　-----　　GND
    
-　　　　　　　　　　　　9(FLG:output)　　-----　　CHK(input)
+　　　　　　　　　　9(FLG:output)　　-----　　CHK(input)
              
-　　　　　　　　　　　　8(OUT:output)　　-----　　IN(input)
+　　　　　　　　　　8(OUT:output)　　-----　　IN(input)
                 
-　　　　　　　　　　　　7(CHK:input)　　　-----　　FLG(output)
+　　　　　　　　　　7(CHK:input)　　　-----　　FLG(output)
                 
-　　　　　　　　　　　　6(IN :input)　　　-----　　OUT(output)
+　　　　　　　　　　6(IN :input)　　　-----　　OUT(output)
                 
 
 ## 使い方
