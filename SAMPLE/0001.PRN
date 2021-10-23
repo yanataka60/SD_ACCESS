@@ -1,0 +1,167 @@
+			  Z80 ASSEMBLER - ZASM VER 1.6
+                      	;MP-85 Sample
+                      	; LEDを右回りに点滅
+  7C00                	        ORG     7C00H   
+                      	
+  7F4A                	LED1    EQU     7F4AH
+  7F49                	LED2    EQU     7F49H
+  7F48                	LED3    EQU     7F48H
+  7F47                	LED4    EQU     7F47H
+  7F46                	LED5    EQU     7F46H
+  7F45                	LED6    EQU     7F45H
+  7F44                	DOT     EQU     7F44H
+                      	
+  7C00  CD637D        	START:  CALL    CLR
+  7C03  CD537D        	        CALL    TIMER
+  7C06  CD637D        	STRT1:  CALL    CLR
+  7C09  214A7F        	        LD      HL,LED1
+  7C0C  3601          	        LD      (HL),01H
+  7C0E  CD537D        	        CALL    TIMER   
+  7C11  CD637D        	        CALL    CLR
+  7C14  21497F        	        LD      HL,LED2
+  7C17  3601          	        LD      (HL),01H
+  7C19  CD537D        	        CALL    TIMER   
+  7C1C  CD637D        	        CALL    CLR
+  7C1F  21487F        	        LD      HL,LED3
+  7C22  3601          	        LD      (HL),01H
+  7C24  CD537D        	        CALL    TIMER   
+  7C27  CD637D        	        CALL    CLR
+  7C2A  21477F        	        LD      HL,LED4
+  7C2D  3601          	        LD      (HL),01H
+  7C2F  CD537D        	        CALL    TIMER   
+  7C32  CD637D        	        CALL    CLR
+  7C35  21467F        	        LD      HL,LED5
+  7C38  3601          	        LD      (HL),01H
+  7C3A  CD537D        	        CALL    TIMER   
+  7C3D  CD637D        	        CALL    CLR
+  7C40  21457F        	        LD      HL,LED6
+  7C43  3601          	        LD      (HL),01H
+  7C45  CD537D        	        CALL    TIMER   
+  7C48  CD637D        	        CALL    CLR
+  7C4B  21457F        	        LD      HL,LED6
+  7C4E  3602          	        LD      (HL),02H
+  7C50  CD537D        	        CALL    TIMER   
+  7C53  CD637D        	        CALL    CLR
+  7C56  21457F        	        LD      HL,LED6
+  7C59  3604          	        LD      (HL),04H
+  7C5B  CD537D        	        CALL    TIMER   
+  7C5E  CD637D        	        CALL    CLR
+  7C61  21457F        	        LD      HL,LED6
+  7C64  3608          	        LD      (HL),08H
+  7C66  CD537D        	        CALL    TIMER   
+  7C69  CD637D        	        CALL    CLR
+  7C6C  21467F        	        LD      HL,LED5
+  7C6F  3608          	        LD      (HL),08H
+  7C71  CD537D        	        CALL    TIMER   
+  7C74  CD637D        	        CALL    CLR
+  7C77  21477F        	        LD      HL,LED4
+  7C7A  3608          	        LD      (HL),08H
+  7C7C  CD537D        	        CALL    TIMER   
+  7C7F  CD637D        	        CALL    CLR
+  7C82  21487F        	        LD      HL,LED3
+  7C85  3608          	        LD      (HL),08H
+  7C87  CD537D        	        CALL    TIMER   
+  7C8A  CD637D        	        CALL    CLR
+  7C8D  21497F        	        LD      HL,LED2
+  7C90  3608          	        LD      (HL),08H
+  7C92  CD537D        	        CALL    TIMER   
+  7C95  CD637D        	        CALL    CLR
+  7C98  214A7F        	        LD      HL,LED1
+  7C9B  3608          	        LD      (HL),08H
+  7C9D  CD537D        	        CALL    TIMER   
+  7CA0  CD637D        	        CALL    CLR
+  7CA3  214A7F        	        LD      HL,LED1
+  7CA6  3610          	        LD      (HL),10H
+  7CA8  CD537D        	        CALL    TIMER   
+  7CAB  CD637D        	        CALL    CLR
+  7CAE  214A7F        	        LD      HL,LED1
+  7CB1  3620          	        LD      (HL),20H
+  7CB3  CD537D        	        CALL    TIMER   
+                      	
+  7CB6  CD637D        	        CALL    CLR
+  7CB9  21447F        	        LD      HL,DOT
+  7CBC  3601          	        LD      (HL),01H
+  7CBE  CD537D        	        CALL    TIMER   
+  7CC1  CD537D        	        CALL    TIMER   
+  7CC4  CD637D        	        CALL    CLR
+  7CC7  21447F        	        LD      HL,DOT
+  7CCA  3602          	        LD      (HL),02H
+  7CCC  CD537D        	        CALL    TIMER   
+  7CCF  CD537D        	        CALL    TIMER   
+  7CD2  CD637D        	        CALL    CLR
+  7CD5  21447F        	        LD      HL,DOT
+  7CD8  3604          	        LD      (HL),04H
+  7CDA  CD537D        	        CALL    TIMER   
+  7CDD  CD537D        	        CALL    TIMER   
+  7CE0  CD637D        	        CALL    CLR
+  7CE3  21447F        	        LD      HL,DOT
+  7CE6  3608          	        LD      (HL),08H
+  7CE8  CD537D        	        CALL    TIMER   
+  7CEB  CD537D        	        CALL    TIMER   
+  7CEE  CD637D        	        CALL    CLR
+  7CF1  21447F        	        LD      HL,DOT
+  7CF4  3610          	        LD      (HL),10H
+  7CF6  CD537D        	        CALL    TIMER   
+  7CF9  CD537D        	        CALL    TIMER   
+  7CFC  CD637D        	        CALL    CLR
+  7CFF  21447F        	        LD      HL,DOT
+  7D02  3620          	        LD      (HL),20H
+  7D04  CD537D        	        CALL    TIMER   
+  7D07  CD537D        	        CALL    TIMER   
+  7D0A  CD637D        	        CALL    CLR
+  7D0D  21447F        	        LD      HL,DOT
+  7D10  3610          	        LD      (HL),10H
+  7D12  CD537D        	        CALL    TIMER   
+  7D15  CD537D        	        CALL    TIMER   
+  7D18  CD637D        	        CALL    CLR
+  7D1B  21447F        	        LD      HL,DOT
+  7D1E  3608          	        LD      (HL),08H
+  7D20  CD537D        	        CALL    TIMER   
+  7D23  CD537D        	        CALL    TIMER   
+  7D26  CD637D        	        CALL    CLR
+  7D29  21447F        	        LD      HL,DOT
+  7D2C  3604          	        LD      (HL),04H
+  7D2E  CD537D        	        CALL    TIMER   
+  7D31  CD537D        	        CALL    TIMER   
+  7D34  CD637D        	        CALL    CLR
+  7D37  21447F        	        LD      HL,DOT
+  7D3A  3602          	        LD      (HL),02H
+  7D3C  CD537D        	        CALL    TIMER   
+  7D3F  CD537D        	        CALL    TIMER   
+  7D42  CD637D        	        CALL    CLR
+  7D45  21447F        	        LD      HL,DOT
+  7D48  3601          	        LD      (HL),01H
+  7D4A  CD537D        	        CALL    TIMER   
+  7D4D  CD537D        	        CALL    TIMER   
+                      	
+  7D50  C3067C        	        JP      STRT1
+                      	
+  7D53                	TIMER:
+  7D53  CDE704        	        CALL    04E7H
+  7D56  3E20          	        LD      A,20H
+  7D58  16FF          	LOP1:   LD      D,0FFH
+  7D5A  15            	LOP2:   DEC     D       
+  7D5B  C25A7D        	        JP      NZ,LOP2    
+  7D5E  3D            	        DEC     A       
+  7D5F  C2587D        	        JP      NZ,LOP1
+  7D62  C9            	        RET
+                      	            
+  7D63  AF            	CLR:    XOR     A
+  7D64  214A7F        	        LD      HL,LED1
+  7D67  77            	        LD      (HL),A
+  7D68  2B            	        DEC     HL      
+  7D69  77            	        LD      (HL),A
+  7D6A  2B            	        DEC     HL      
+  7D6B  77            	        LD      (HL),A
+  7D6C  2B            	        DEC     HL      
+  7D6D  77            	        LD      (HL),A
+  7D6E  2B            	        DEC     HL      
+  7D6F  77            	        LD      (HL),A
+  7D70  2B            	        DEC     HL      
+  7D71  77            	        LD      (HL),A
+  7D72  2B            	        DEC     HL      
+  7D73  77            	        LD      (HL),A
+  7D74  C9            	        RET
+                      	        
+  7D75                	        END
+
